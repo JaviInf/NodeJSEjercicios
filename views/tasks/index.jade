@@ -1,0 +1,25 @@
+h1 Tus tareas
+p
+  a(href='/tasks/new', class='btn btn-success') Añadir tarea
+
+-if(typeof flash != 'undefined')
+  include ../mixins/flash-messages
+  mixin flash-messages(flash)
+
+- if(docs.length)
+  table.table-striped.table-hover
+    tr
+      th Tarea
+      th
+      th
+      each task in docs
+        tr
+          td.glyphicon.glyphicon-asterisk #{task.task}
+          td
+            a.btn(href="/tasks/#{task.id}/edit") Editar
+          td
+            form(method='post', action='/tasks/' + task.id)
+              input(name='_method', value='DELETE', type='hidden')
+              button.btn.btn-danger(type='submit') Eliminar
+- else
+  p No tienes tareas pendientes! 

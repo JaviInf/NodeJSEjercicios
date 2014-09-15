@@ -1,0 +1,7 @@
+mixin flash-messages(flash)
+  - if(flash.warning)
+    div.alert.alert-danger.alert-dismissible
+      p= flash.warning
+  - if(flash.info)
+    div(data-alert='alert').alert.alert-info.alert-dismissible
+      p= flash.info

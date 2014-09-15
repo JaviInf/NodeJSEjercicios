@@ -1,0 +1,23 @@
+body {
+  padding: 70px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+h1{
+	padding: 20px;
+}
+h2{
+	padding: 20px;
+}
+
+th{
+	padding: 10px;
+	padding-left: 50px;
+}
+td{
+	padding: 10px;
+	padding-left: 20px;
+}
